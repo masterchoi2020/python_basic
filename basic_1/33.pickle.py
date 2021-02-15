@@ -1,4 +1,5 @@
 # pickle 프로그램상에서 사용하고 있는 데이터를 파일 형태로 저장
+# (객체 형태를 그대로 유지하면서 파일에 저장하고 불러 올 수 있다)
 
 import pickle
 
@@ -9,7 +10,8 @@ profile_file = open("profile.pickle", "wb")  # profile.pickle 로 데이터 쓰�
 profile = {"이름":"박명수", "나이":30, "취미":["축구", "골프", "코딩"]}
 print(profile)
 
-pickle.dump(profile, profile_file)  # pickle 파일에 data 쓰기 (profile에 있는 정보를 file에 저정)
+# dump()함수를 사용해 pickle 파일에 data 쓰기 (profile에 있는 dictionary 객체 정보를 file에 저정)
+pickle.dump(profile, profile_file)  
 profile_file.close()
 
 # 2. pickle로 데이터 읽어 오기
