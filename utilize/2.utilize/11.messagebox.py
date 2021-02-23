@@ -30,7 +30,7 @@ def yesnocancel():
     #아니오 : 저장하지 않고 종료
     #취소: 프로그램 종료 취소(현재 화면에서 계속 작업)
 
-    print("응답:", response)   # True,False,None => 예(1), 아니오(0), 그 외
+    print("응답:", response)   # True,False,None => 예(1), 아니오(0), 그 외(None)
 
     if response == 1:  # 네, OK
         print("예")
@@ -38,7 +38,7 @@ def yesnocancel():
         print("아니오")
     else:
         print("취소")
-        
+
 Button(root, command=info, text="알림").pack()
 Button(root, command=warn, text="경고").pack()
 Button(root, command=error, text="에러").pack()
